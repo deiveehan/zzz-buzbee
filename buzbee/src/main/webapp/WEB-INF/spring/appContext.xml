@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:cloud="http://schema.cloudfoundry.org/spring" xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://schema.cloudfoundry.org/spring
+http://schema.cloudfoundry.org/spring/cloudfoundry-spring-0.7.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+http://www.springframework.org/schema/jee
+http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+http://www.springframework.org/schema/data/jpa
+http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.1.xsd
+http://www.springframework.org/schema/data/mongo
+http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+http://www.springframework.org/schema/task
+http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<mvc:annotation-driven />
+	<context:annotation-config />
+	<context:component-scan base-package="com.cv" />
+
+	<!-- Task -->
+	<task:annotation-driven />
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+	<!-- Bean configurations -->
+	<bean id="appConfiguration" class="com.cv.tech.framework.configuration.AppConfiguration"></bean>
+
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+
+	<!-- Mongo declarations -->
+	<!-- Mongodb in the Cloud -->
+	<!-- <cloud:mongo-db-factory id="mongoDbFactory" /> <bean id="mongoTemplate" 
+		class="org.springframework.data.mongodb.core.MongoTemplate"> <constructor-arg 
+		name="mongoDbFactory" ref="mongoDbFactory" /> </bean> -->
+
+	<mongo:repositories base-package="com.cv.tech.framework.mongorepository"
+		mongo-template-ref="mongoTemplate" />
+
+	<!-- Security configurations -->
+<!-- 	<security:global-method-security
+		secured-annotations="enabled" pre-post-annotations="enabled"></security:global-method-security>
+	<security:http auto-config="true" use-expressions="true">
+		<security:form-login login-page="/open/openhome"
+			authentication-failure-url="/open/loginFailed" default-target-url="/home/in" />
+		<security:logout logout-success-url="/open/logout" />
+		<security:intercept-url pattern="/resources/**"
+			access="permitAll()" />
+		<security:intercept-url pattern="/js/**"
+			access="permitAll()" />
+		<security:intercept-url pattern="/open/**"
+			access="permitAll()" />
+		<security:intercept-url pattern="/**"
+			access="isFullyAuthenticated()" />
+		<security:logout invalidate-session="true" />
+	</security:http>
+	<security:authentication-manager>
+		<security:authentication-provider
+			user-service-ref="appUserDetailsService"></security:authentication-provider>
+	</security:authentication-manager> -->
+</beans>

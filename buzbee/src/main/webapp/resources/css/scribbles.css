@@ -1,0 +1,80 @@
+@CHARSET "ISO-8859-1";
+
+@font-face {
+	font-family: 'snickles';
+	src: url('../fonts/Snickles.ttf');
+	font-weight: normal;
+	font-style: normal;
+	font-size: 50;
+	color: black;
+}
+
+#mainBody {
+	/* background: -webkit-gradient(linear, 0 0, 0 100%, from(#BEC4EE), to(white)); */ 
+}
+
+@font-face {
+	font-family: 'dustimo';
+	src: url('../fonts/dustismo-webfont.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#readerHeader {
+	font-family: snickles;
+	//background-color: hsla(41, 35%, 45%, 1.0);
+	padding: 5px;
+}
+
+#ereaderbox {
+	
+}
+#readerBody {
+	border-radius: 10px;
+	border: 2px solid;
+	padding-top: 10px;
+	padding-right: 3em;
+	padding-bottom: 0.25in;
+	padding-left: 3em;
+	height: 512px;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+#homeRightBar {
+/* 		border-radius: 10px;
+ 	border: 1px solid;
+ */	padding-top: 0 0 0 0;
+/* 	padding-right: 3em;
+	padding-bottom: 0.25in;
+	padding-left: 3em; 
+ 	height: 512px;
+ 	overflow-x: hidden;
+	overflow-y: visible;
+ */}
+#gadgetBody {
+	border-radius: 10px;
+/* 	border: 1px solid;
+	padding-top: 10px;
+	padding-right: 3em;
+	padding-bottom: 0.25in;
+	padding-left: 3em; */
+	height: 512px;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.form{
+	padding-top: 10px;
+}
+#appBodyContent {
+/* 	padding-top: 10px;
+	padding-right: 3em;
+	padding-bottom: 0.25in;
+	padding-left: 3em; */
+}
+
+
+
+.divborder {
+	border: 1px solid;
+}

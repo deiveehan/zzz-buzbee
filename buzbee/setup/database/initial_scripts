@@ -1,0 +1,8 @@
+#####################
+role = { "_class" : "com.hippo.tech.framework.document.AppRole", name: "ADMIN"};
+db.appRole.save(role);
+role = {"_class" : "com.hippo.tech.framework.document.AppRole",  name: "USER"};
+db.appRole.save(role);
+
+adminUser = { "_id" : ObjectId("4f550b4c7d8b7ebd04275769"), "_class" : "com.hippo.tech.framework.document.AppUser", "userId" : "admin@admin.com", "password" : "admin", "age" : 0, "appRole" : { "$ref" : "appRole", "$id" : ObjectId("4f550d4d3658619d8a3c6f62") } }
+db.appUser.save(adminUser);

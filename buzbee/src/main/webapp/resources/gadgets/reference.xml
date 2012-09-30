@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+	<ModulePrefs title="Embed Msg Gadget Example" height="2000"
+		author="Fred Bilitnekoff" author_email="fred@raiders.com">
+		<Require feature="dynamic-height"/>
+		<Require feature="rpc"/>
+	</ModulePrefs>
+	<Content type="html" view="profile, canvas"><![CDATA[
+	<head>
+	<link rel="stylesheet" href="http://localhost:8080/gadgets/files/container/gadgets.css">
+	</head>
+
+  		<body bgcolor="#C1FFC1">
+			A Simple reference gadget
+  		</body>
+  ]]></Content>
+</Module>
