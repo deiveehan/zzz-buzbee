@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="resources/css/buzbee.css">
+<link href="js/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+<style>
+body {
+	padding-top: 60px !important;
+	/* 60px to make the container go all the way to the bottom of the topbar */
+}
+</style>
+</head>
+<body>
+	<div class="header" id="headerDiv"> 
+	
+	</div>
+
+
+	<div class="container">
+		<div class="row">
+
+			<div class="span8">
+				<p>
+				<h3>Scribbles</h3>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+				nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+				volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+				ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+				consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+				velit esse molestie consequat, vel illum dolore eu feugiat nulla
+				facilisis at vero eros et accumsan et iusto odio dignissim qui
+				blandit praesent luptatum zzril delenit augue duis dolore te feugait
+				nulla facilisi. Nam liber tempor cum soluta nobis eleifend option
+				congue nihil imperdiet doming id quod mazim placerat facer possim
+				assum. Typi non habent claritatem insitam; est usus legentis in iis
+				qui facit eorum claritatem. Investigationes demonstraverunt lectores
+				legere me lius quod ii legunt saepius. Claritas est etiam processus
+				dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est
+				notare quam littera gothica, quam nunc putamus parum claram,
+				anteposuerit litterarum formas humanitatis per seacula quarta decima
+				et quinta decima. Eodem modo typi, qui nunc nobis videntur parum
+				clari, fiant sollemnes in futurum.
+			</div>
+			<div class="span4">
+				<p>
+				<h4>Login</h4>
+				<form class="well" name="loginForm" id="loginForm"
+					action="<c:url value='../j_spring_security_check'></c:url>"
+					method="POST">
+
+					<input type="text" class="span3" placeholder="User id(Email)"
+						name="j_username" value="deivee@scr.com"> <input
+						type="password" class="span3" placeholder="Password"
+						name="j_password" value="deivee">
+					<!-- <label	class="checkbox"> <input type="checkbox"> Rememberme </label> -->
+					<input type="submit" value="Sign in" class="btn btn-primary "></input>
+					<input type="reset" value="Reset" class="btn">
+				</form>
+			</div>
+		</div>
+
+
+		<footer id="footer" class="bar bottom">
+		<div class="modal-footer">
+			<div class="container">
+				<div class="row">
+					<div class="span3">
+						<h4>E-buzzbee</h4>
+						<ul class="unstyled">
+							<li><a href="#">How it works</a></li>
+							<li><a href="#">Users</a></li>
+							<li><a href="#">Technologies used</a></li>
+						</ul>
+					</div>
+
+					<div class="span3"> 
+						<h4>Other applications</h4>
+						<ul class="unstyled">
+							<li><a href="#">Application 1</a></li>
+							<li><a href="#">Application 2</a></li>
+							<li><a href="#">Application 3</a></li>
+						</ul>
+					</div>
+					<div class="span5">
+						<h4>Follow Us</h4>
+						<ul class="unstyled">
+							<li><a href="#" class="social-icon twitter push-right-half">Twitter</a>
+								<a href="#" class="social-icon facebook push-right-half">Facebook</a>
+							</li>
+						</ul>
+						</li>
+					</div>
+				</div>
+			</div>
+		</div>
+		</footer>
+	</div> 
+
+	<script type="text/javascript" src="js/libs/jquery/jquery-min.js"></script>
+	<script type="text/javascript"
+		src="js/libs/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="js/libs/backbone/backbone-min.js"></script>
+	<script src="js/app/main.js"></script>
+</body>
+</html>
